@@ -14,7 +14,7 @@ jobs:
 
     env:
       name: ${{ env.PERSON_NAME }}
-      talent: ${{ secrets.TALLENT }}
+      talent: ${{ secrets.TALENT }}
 
     steps:
       - name: Checkout code
