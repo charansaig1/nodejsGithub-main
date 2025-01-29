@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      MYNAME: ${{ env.MYNAME }}
+      MYNAME: ${{ secrets.MYNAME }}
       MY_SECRET_TALENT: ${{ secrets.SMS }}
 
     steps:
