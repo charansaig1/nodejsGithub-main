@@ -3,18 +3,18 @@ name: Node.js CI
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     env:
-      name: ${{ env.PERSON_NAME }}
-      talent: ${{ secrets.TALENT }}
+      name: ${{ env.MYNAME}}
+      talent: ${{ secrets.SMS}}
 
     steps:
       - name: Checkout code
