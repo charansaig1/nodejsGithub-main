@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      name: ${{ env.MYNAME}}
-      talent: ${{ secrets.SMS}}
+      MYNAME: ${{ env.MYNAME }}
+      MY_SECRET_TALENT: ${{ secrets.SMS }}
 
     steps:
       - name: Checkout code
@@ -35,4 +35,4 @@ jobs:
         run: npm test
 
       - name: Run shell script with environment variables
-        run: echo "Hi, my name is $name and my secret talent is $talent"
+        run: echo "Hi, my name is $MYNAME and my secret talent is $MY_SECRET_TALENT"
